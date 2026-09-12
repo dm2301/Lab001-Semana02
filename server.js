@@ -1,9 +1,10 @@
 const express = require('express');
 
 const app = express();
+const MESSAGE = process.env.MESSAGE || 'Mundo';
 
 app.get('/', (req, res) => {
-  res.send('Hola Mundo');
+  res.send(`Hola ${MESSAGE}`);
 });
 
 app.listen(3000, () => {
