@@ -63,3 +63,14 @@ Deshabilita toda la conectividad de red del contenedor. Los contenedores con est
 
 ### overlay
 Permite la comunicacion entre contenedores que corren en diferentes hosts. Es el tipo de red utilizado por Docker Swarm para conectar servicios distribuidos en un cluster. No es necesaria para entornos de un solo host.
+
+## Tipos de volumenes en Docker
+
+### bind mount
+Monta una ruta especifica del host dentro del contenedor. El archivo o directorio existe en el sistema de archivos del host y cualquier cambio se refleja en ambos lados. Es util para compartir codigo fuente durante el desarrollo, pero puede generar problemas de permisos y no esta gestionado por Docker.
+
+### named volume
+Es un volumen gestionado por Docker y almacenado en el area de datos de Docker. Se identifica por un nombre y persiste mas alla del ciclo de vida del contenedor. Es la forma recomendada de persistir datos de bases de datos u otros servicios stateful, ya que facilita backups, migraciones y portabilidad.
+
+### tmpfs
+Crea un volumen temporal en la memoria del host. Los datos se pierden cuando el contenedor se detiene. Es util para archivos sensibles que no deben escribirse en disco o para caches temporales que no requieren persistencia.
