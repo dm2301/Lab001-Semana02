@@ -19,6 +19,15 @@ services:
     networks:
       - lab-network
 
+  api3:
+    build: .
+    ports:
+      - "3003:3000"
+    env_file:
+      - .env
+    networks:
+      - lab-network
+
   postgres:
     image: postgres:15-alpine
     env_file:
