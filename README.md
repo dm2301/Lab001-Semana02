@@ -74,3 +74,17 @@ Es un volumen gestionado por Docker y almacenado en el area de datos de Docker. 
 
 ### tmpfs
 Crea un volumen temporal en la memoria del host. Los datos se pierden cuando el contenedor se detiene. Es util para archivos sensibles que no deben escribirse en disco o para caches temporales que no requieren persistencia.
+
+## Variables de entorno
+
+Las siguientes variables se leen desde el archivo `.env`:
+
+| Variable | Descripcion | Ejemplo |
+|----------|-------------|---------|
+| `MESSAGE` | Mensaje personalizado que la API incluye en la respuesta | `DockerLab` |
+| `PORT` | Puerto interno en el que escucha la API dentro del contenedor | `3000` |
+| `POSTGRES_USER` | Usuario administrador de PostgreSQL | `labuser` |
+| `POSTGRES_PASSWORD` | Contrasena del usuario de PostgreSQL | `labpass` |
+| `POSTGRES_DB` | Nombre de la base de datos creada al iniciar PostgreSQL | `labdb` |
+
+Para configurar el entorno local copia `.env.example` a `.env` y ajusta los valores segun sea necesario. El archivo `.env` no debe subirse al repositorio.
