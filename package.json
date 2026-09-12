@@ -1,0 +1,20 @@
+{
+  "name": "lab001",
+  "version": "1.0.0",
+  "description": "Laboratorio 02 - Docker Compose con Node.js y PostgreSQL",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "docker",
+    "compose",
+    "express",
+    "postgresql"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}
