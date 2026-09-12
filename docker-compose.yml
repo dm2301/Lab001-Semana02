@@ -7,6 +7,17 @@ services:
       - "3001:3000"
     env_file:
       - .env
+    networks:
+      - lab-network
+
+  api2:
+    build: .
+    ports:
+      - "3002:3000"
+    env_file:
+      - .env
+    networks:
+      - lab-network
 
   postgres:
     image: postgres:15-alpine
