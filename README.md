@@ -81,7 +81,7 @@ Las siguientes variables se leen desde el archivo `.env`:
 
 | Variable | Descripcion | Ejemplo |
 |----------|-------------|---------|
-| `MESSAGE` | Mensaje personalizado que la API incluye en la respuesta | `DockerLab` |
+| `MESSAGE` | Mensaje completo que retorna la API | `Hola, me llamo Diego y estudio Ing. de sistemas` |
 | `PORT` | Puerto interno en el que escucha la API dentro del contenedor | `3000` |
 | `POSTGRES_USER` | Usuario administrador de PostgreSQL | `labuser` |
 | `POSTGRES_PASSWORD` | Contrasena del usuario de PostgreSQL | `labpass` |
